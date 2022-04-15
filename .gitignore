@@ -12,7 +12,7 @@
 /build
 
 #json file
-/src/constants/data.json
+# /src/constants/data.json
 
 # misc
 .DS_Store
