@@ -1,33 +1,14 @@
 import React, {useState, UseEffect, useEffect} from 'react'
 // import myJSONData from './constants/data.json'
 import './App.css';
-import { useColorFleeter } from './hooks/useColorFleeter'
 import {AutoSizer, List} from 'react-virtualized';
 import styled from 'styled-components'
 import 'react-virtualized/styles.css'; // only needs to be imported once
 
-let timerUnifier; 
 function App() {
-  const [number, setNumber] = useState(0)
-  
-  const randomNumberGenerator = () => {
-    setNumber(Math.floor(Math.random() * 100))
-  }
-  
-  useEffect(() => {
-    timerUnifier = setInterval(() => {
-      randomNumberGenerator()
-    }, 3000)
-    return () => {
-      clearInterval(timerUnifier)
-    }
-  }, [])
-
   return (
     <div className="App">
-      <div style={{background: useColorFleeter(number), height: '100vh'}}>
-        
-      </div>
+      
     </div>
   );
 }
