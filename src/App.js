@@ -2,13 +2,14 @@ import React, {useState, UseEffect, useEffect} from 'react'
 // import myJSONData from './constants/data.json'
 import './App.css';
 import {AutoSizer, List} from 'react-virtualized';
+import SampleOfContext from './components/contextApiSample/'
 import styled from 'styled-components'
 import 'react-virtualized/styles.css'; // only needs to be imported once
 
 function App() {
   return (
     <div className="App">
-      
+      <SampleOfContext />
     </div>
   );
 }
