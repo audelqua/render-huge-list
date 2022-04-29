@@ -3,6 +3,7 @@ import React, { useEffect, useRef, useState } from 'react'
 // ******************** save mutable  ********************
 const SampleOfUseRef = props => {
     const intervalRef = useRef(null)
+    // ******************** lets call intervalRef here as an instance variable ********************
     const [counter, setCounter] = useState(120)
     console.log('counter', counter, intervalRef);
 
