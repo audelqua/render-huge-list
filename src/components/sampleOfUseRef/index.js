@@ -7,7 +7,6 @@ const SampleOfUseRef = props => {
     console.log('counter', counter, intervalRef);
 
     const downCountHandler = () => setCounter(counter => counter - 1)
-
     useEffect(() => {
         const myInterval = setInterval(() => {
             downCountHandler()
