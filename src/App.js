@@ -5,6 +5,7 @@ import {AutoSizer, List} from 'react-virtualized';
 import SampleOfContext from './components/useContextSample'
 import CounterWithUseReducer from './components/counterWithUseReducer'
 import SampleOfUseCallback from './components/sampleOfUseCallback'
+import SampleOfUseRef from './components/sampleOfUseRef'
 import SampleOfUseMemo from './components/sampleOfUseMemo'
 
 import styled from 'styled-components'
@@ -13,7 +14,7 @@ import 'react-virtualized/styles.css'; // only needs to be imported once
 function App() {
   return (
     <div className="App">
-      <SampleOfUseMemo />
+      <SampleOfUseRef />
     </div>
   );
 }
