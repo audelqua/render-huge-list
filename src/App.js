@@ -9,6 +9,8 @@ import SampleOfUseRef from './components/sampleOfUseRef'
 import SampleOfUseMemo from './components/sampleOfUseMemo'
 import SampleOfUseTransition from './components/sampleOfUseTransition'
 import UsingOfBindMethod from './components/sampleOfUsingBind'
+import SampleAddCustomAttribute from './components/sampleAddCustomAttribute'
+
 
 
 import styled from 'styled-components'
@@ -17,7 +19,7 @@ import 'react-virtualized/styles.css'; // only needs to be imported once
 function App() {
   return (
     <div className="App">
-      <UsingOfBindMethod />
+      <SampleAddCustomAttribute />
     </div>
   );
 }
