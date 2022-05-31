@@ -14,6 +14,7 @@ const SampleOfUseMemo = props => {
     // We can wrap the expensive function call with useMemo.
     // The useMemoHook accepts a second parameter to declare dependencies. The expensive function will only run when its dependencies have changed.
     // In the following example, the expensive function will only run when count is changed and not when todo's are added.
+    // Calc function is memoized also they way it handled is kind of tricky way
     const calculation = useMemo(() => expensiveCalculation(count), [count])  
 
     const increment = () => {
