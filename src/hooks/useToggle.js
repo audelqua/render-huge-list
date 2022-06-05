@@ -1,10 +1,17 @@
-import React, { useState } from 'react'
+import React, { useState, useCallback, useMemo } from 'react'
 
 const useToggle = () => {
     const [bool, setBool] = useState(false)
+    console.log('ssss', bool);
+    const handleToggle = useCallback(() => setBool(prevBool => !prevBool), [])
 
-    const handleToggle = () => setBool(prevBool => !prevBool)
-
-    return {bool, handleToggle}
+    const values = useMemo(
+        () => ({
+            bool,
+            handleToggle
+        }),
+        [bool, handleToggle]
+    );
+    return values
 }
 export default useToggle
