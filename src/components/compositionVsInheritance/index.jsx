@@ -1,18 +1,15 @@
 import React, { useState } from 'react'
+import useToggle from '../../hooks/useToggle'
 
 const CompositionVsInheritance = () => {
-    const [expanded, setExpanded] = useState(false);
-    
-    const toggleExpanded = () => {
-        setExpanded((prevExpanded) => !prevExpanded);
-    };
+    const { bool, handleToggle } = useToggle()
     
     return (
         <div>
-        <button onClick={toggleExpanded}>
-            Header <span>{expanded ? "-" : "+"}</span>
+        <button onClick={handleToggle}>
+            Header <span>{bool ? "-" : "+"}</span>
         </button>
-        {expanded && <div>Content</div>}
+        {bool && <div>Content</div>}
         </div>
     );
 }
