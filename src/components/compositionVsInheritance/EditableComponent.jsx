@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import useToggle from '../../hooks/useToggle'
 
 const Editable = () => {
+    //instead of defining state and handleToggle here and also in other component we can define 
+    // it in useToggle hook as react composition ask us to dont repeat similar codes
     const { bool, handleToggle } = useToggle()
     const [inputValue, setInputValue] = useState("Title");
 
