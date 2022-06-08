@@ -2,18 +2,29 @@ import React, { Component } from 'react'
 
 //adding ref to the class component
 class SampleOfUsingRef extends Component {
+    constructor(props) {
+        super(props)
+        this.componentRef = React.createRef()
+    }
+
     render() {
         return (
             <div>
-                <span>grandpa</span>
+                <span>grandpa component</span>
                 <br />
                 {/* <AutoFocusTextInput /> */}
+                <ChildFunctionComponent ref={this.componentRef}/>
             </div>
         )
     }
 }
 export default SampleOfUsingRef
 
+const ChildFunctionComponent = (props) => {
+    return (
+        <div>Im child function component</div>
+    )
+}
 //parent component
 class AutoFocusTextInput extends React.Component {
     constructor(props) {
