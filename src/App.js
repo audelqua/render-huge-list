@@ -13,6 +13,7 @@ import SampleAddCustomAttribute from './components/sampleAddCustomAttribute'
 import SampleOfForwardRef from './components/sampleOfForwardRef'
 import CompositionVsInheritance from './components/compositionVsInheritance'
 import Editable from './components/compositionVsInheritance/EditableComponent'
+import SampleOfUsingRef from './components/sampleOfUsingRef'
 
 
 
@@ -22,8 +23,7 @@ import 'react-virtualized/styles.css'; // only needs to be imported once
 function App() {
   return (
     <div className="App">
-      <Editable />
-      <CompositionVsInheritance />
+      <SampleOfUsingRef />
     </div>
   );
 }
