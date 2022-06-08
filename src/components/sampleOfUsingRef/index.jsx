@@ -7,7 +7,7 @@ class SampleOfUsingRef extends Component {
             <div>
                 <span>grandpa</span>
                 <br />
-                <AutoFocusTextInput />
+                {/* <AutoFocusTextInput /> */}
             </div>
         )
     }
@@ -53,11 +53,11 @@ class CustomTextInput extends React.Component {
         this.setState({text: e.target.value})
     }
 
-    // focusTextInput() {
-    //     // Explicitly focus the text input using the raw DOM API
-    //     // Note: we're accessing "current" to get the DOM node
-    //     this.textInput.current.focus();
-    // }
+    focusTextInput() {
+        // Explicitly focus the text input using the raw DOM API
+        // Note: we're accessing "current" to get the DOM node
+        this.textInput.current.focus();
+    }
 
     render() {
         return(
@@ -68,43 +68,6 @@ class CustomTextInput extends React.Component {
         )
     }
 }
-
-// this code uses a ref to store a reference to a DOM node.
-// class SampleOfUsingRef extends Component {
-//     constructor(props) {
-//         super(props)
-//         this.state = {
-//             text: ''
-//         }
-//         this.handleChangeText = this.handleChangeText.bind(this)
-//         this.handleClick = this.handleClick.bind(this)
-//         this.textInput = React.createRef();
-//     }
-    
-//     handleChangeText(e) {
-//         this.setState({text: e.target.value})
-//     }
-
-//     handleClick() {
-//        this.textInput.current.focus()
-//        console.log(this.textInput);
-//     }
-//     render() {
-//         return (
-//             <div>
-//                 <span>hello class component</span>
-//                 <button onClick={this.handleClick}>
-//                     click me to call handler
-//                 </button>
-//                 <input value={this.state.text} onChange={this.handleChangeText} ref={this.textInput}/>
-//                 {/* <button onClick={this.handleClick.bind(this)}>
-//                     click me to call handler
-//                 </button> */}
-//             </div>
-//         )
-//     }
-// }
-// export default SampleOfUsingRef
 
 
 
