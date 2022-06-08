@@ -15,6 +15,7 @@ import CompositionVsInheritance from './components/compositionVsInheritance'
 import Editable from './components/compositionVsInheritance/EditableComponent'
 import SampleOfUsingRef from './components/sampleOfUsingRef'
 import SampleOfForwardingRef from './components/sampleOfForwardingRef'
+import SampleOfHOC from './components/sampleOfHOC'
 
 
 
@@ -24,7 +25,7 @@ import 'react-virtualized/styles.css'; // only needs to be imported once
 function App() {
   return (
     <div className="App">
-      <SampleOfForwardingRef />
+      <SampleOfHOC />
     </div>
   );
 }
