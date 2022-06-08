@@ -21,12 +21,19 @@ class SampleOfUsingRef extends Component {
 export default SampleOfUsingRef
 
 const ChildFunctionComponent = (props) => {
-    const myRef = React.createRef()
-    console.log(myRef)
+    const myRefWithReactCreateRef = React.createRef()
+    const myRefWithHook = React.useRef()
+
+
+    console.log('with create:', myRefWithReactCreateRef)
+    console.log('with hook:', myRefWithHook)
+
+
     return (
         <>
             <div>Im child function component</div>
-            <input ref={myRef}/>
+            <input ref={myRefWithReactCreateRef}/>
+            <input ref={myRefWithHook}/>
         </>
     )
 }
