@@ -21,8 +21,13 @@ class SampleOfUsingRef extends Component {
 export default SampleOfUsingRef
 
 const ChildFunctionComponent = (props) => {
+    const myRef = React.createRef()
+    console.log(myRef)
     return (
-        <div>Im child function component</div>
+        <>
+            <div>Im child function component</div>
+            <input ref={myRef}/>
+        </>
     )
 }
 //parent component
