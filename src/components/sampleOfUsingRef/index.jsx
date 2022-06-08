@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-// using ref as a DOM node reference
+// this code uses a ref to store a reference to a DOM node.
 class SampleOfUsingRef extends Component {
     constructor(props) {
         super(props)
@@ -19,7 +19,6 @@ class SampleOfUsingRef extends Component {
     handleClick() {
        this.textInput.current.focus()
     }
-
     render() {
         return (
             <div>
