@@ -17,6 +17,7 @@ import SampleOfUsingRef from './components/sampleOfUsingRef'
 import SampleOfForwardingRef from './components/sampleOfForwardingRef'
 import SampleOfHOC from './components/sampleOfHOC'
 import SampleOfCallBackRef from './components/sampleOfCallBackRef'
+import SampleUsageOfRootRender from './components/sampleUsageOfRootRender'
 
 
 
@@ -26,7 +27,7 @@ import 'react-virtualized/styles.css'; // only needs to be imported once
 function App() {
   return (
     <div className="App">
-      <SampleOfCallBackRef />
+      <SampleUsageOfRootRender />
     </div>
   );
 }
