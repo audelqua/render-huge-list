@@ -28,11 +28,11 @@ import 'react-virtualized/styles.css'; // only needs to be imported once
 function App() {
   return (
     <div className="App2">
-      {console.log('dddd')}
+      {/* {console.log('dddd')}
       this is another root in same repo
       <SampleOfForwardingRef />
       <SampleOfHOC />
-      <SampleOfForwardRef />
+      <SampleOfForwardRef /> */}
     </div>
   );
 }

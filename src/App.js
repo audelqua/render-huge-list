@@ -28,7 +28,7 @@ import 'react-virtualized/styles.css'; // only needs to be imported once
 function App() {
   return (
     <div className="App">
-      <SampleUsageOfFlushSync />
+      {/* <SampleUsageOfFlushSync /> */}
     </div>
   );
 }
