@@ -16,12 +16,12 @@ class ShallowComparisonTesting extends React.Component{
     handleClick() {
         let x = this.state.y
         x.name = 3
-        console.log(this.state);
+        console.log('state in father', this.state);
     }
     render() {
         return (
-            <div onClick={this.isStatsEqual}>
-                <span onClick={() => this.handleClick()}>wefwef</span>
+            <div onClick={this.isStatsEqual} style={{marginTop: '30px'}}>
+                <button onClick={() => this.handleClick()}>click me to mutate the state</button>
                 <ChildComponent obj={this.state.y}/>
             </div>
         )
@@ -30,7 +30,7 @@ class ShallowComparisonTesting extends React.Component{
 export default ShallowComparisonTesting
 
 const ChildComponent = props => {
-    console.log('re rendered', props)
+    console.log('props in child', props)
     return (
         <div>
             hello {props.obj.name}
