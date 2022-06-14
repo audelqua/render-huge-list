@@ -19,6 +19,7 @@ import SampleOfHOC from './components/sampleOfHOC'
 import SampleOfCallBackRef from './components/sampleOfCallBackRef'
 import SampleUsageOfRootRender from './components/sampleUsageOfRootRender'
 import SampleUsageOfFlushSync from './components/sampleUsageOfFlushSync'
+import ShallowComparisonTesting from './components/shallowComparisonTesting'
 
 
 
@@ -28,7 +29,7 @@ import 'react-virtualized/styles.css'; // only needs to be imported once
 function App() {
   return (
     <div className="App">
-      {/* <SampleUsageOfFlushSync /> */}
+      <ShallowComparisonTesting />
     </div>
   );
 }
