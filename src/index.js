@@ -5,7 +5,7 @@ import App from './App';
 import App2 from './App2';
 import reportWebVitals from './reportWebVitals';
 
-const root1 = ReactDOM.createRoot(document.getElementById('root'));
+const root1 = ReactDOM.createRoot(document.getElementById('root1'));
 const root2 = ReactDOM.createRoot(document.getElementById('root2'));
 //StrictMode here make side effects like useEffect render twice due to check if anything is wrong or what. it only will happen in development mode.
 root1.render(

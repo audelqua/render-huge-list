@@ -20,8 +20,7 @@ import SampleOfCallBackRef from './components/sampleOfCallBackRef'
 import SampleUsageOfRootRender from './components/sampleUsageOfRootRender'
 import SampleUsageOfFlushSync from './components/sampleUsageOfFlushSync'
 import ShallowComparisonTesting from './components/shallowComparisonTesting'
-
-
+import ShoppingCart from './components/shoppingCart'
 
 import styled from 'styled-components'
 import 'react-virtualized/styles.css'; // only needs to be imported once
@@ -29,7 +28,7 @@ import 'react-virtualized/styles.css'; // only needs to be imported once
 function App() {
   return (
     <div className="App">
-      <ShallowComparisonTesting />
+      <ShoppingCart />
     </div>
   );
 }
