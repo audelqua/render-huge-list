@@ -7,7 +7,7 @@
 .container .general-child{ /* when you want to select a className which has both of this classes */
     background-color: red
 }
-.container .child-1{ /* when you want to select a class inside outer class 
+.container .child-1{ /* changing style of a class inside another class. when you want to select a class inside outer class 
     by knowing that you have same class somewhere else and dont want it to be selected */
     background: lightgreen
 }
@@ -15,11 +15,28 @@
     color: #00e;
     font-size: 20px
 }
-/* .container-2{
+.container .general-child.child-2{ /* changing style of a className with two classes */
+    font-weight: bold;
+    font-size: 30px
+}
+.container span.span-child-3, p{ /* getting specific element with className and without it inside a specific class */
+    background: white;
+    font-size: 20px;
+}
+.container .child-8 > span {
+    color: blue;
+    font-weight: bold
+}
+
+
+.container-2{
     width: 100vw;
     height: 50vh;
     background-color: lightgreen
-} */
+}
+.container-2 .child-7::before{
+    content: ' Im here befor child 7 '
+}
 /* .child-1 > span{
     color: pink
 } */
