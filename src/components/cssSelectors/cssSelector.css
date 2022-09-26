@@ -1,0 +1,25 @@
+.container{
+    width: 100vw;
+    height: 50vh;
+    background-color: lightblue
+}
+
+.container .general-child{ /* when you want to select a className which has both of this classes */
+    background-color: red
+}
+.container .child-1{ /* when you want to select a class inside outer class 
+    by knowing that you have same class somewhere else and dont want it to be selected */
+    background: lightgreen
+}
+.child-1{ /* you can see that this will work for both classes child-1 */
+    color: #00e;
+    font-size: 20px
+}
+/* .container-2{
+    width: 100vw;
+    height: 50vh;
+    background-color: lightgreen
+} */
+/* .child-1 > span{
+    color: pink
+} */
