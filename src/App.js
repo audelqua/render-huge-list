@@ -27,6 +27,8 @@ import styled from 'styled-components'
 import 'react-virtualized/styles.css'; // only needs to be imported once
 
 function App() {
+  window.name = 'audrey '
+
   return (
     <div className="App">
       <CssSelectors />

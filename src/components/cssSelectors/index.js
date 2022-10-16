@@ -3,6 +3,7 @@ import './cssSelector.css'
 
 
 const CssSelector = () => {
+    console.log('here somewhere else logging name in window: ', window.name);
     return (
         <>
             <div className='container'>
