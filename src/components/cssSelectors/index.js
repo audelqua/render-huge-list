@@ -3,7 +3,8 @@ import './cssSelector.css'
 
 
 const CssSelector = () => {
-    console.log('here somewhere else logging name in window: ', window.name);
+    console.log('here somewhere else logging name in window: ', window.name) //audrey 
+    console.log('process.env ', process.env.REACT_APP_TOAST_MESSAGE) //hello world
     return (
         <>
             <div className='container'>
