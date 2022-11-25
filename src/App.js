@@ -27,6 +27,7 @@ import styled from 'styled-components'
 import 'react-virtualized/styles.css'; // only needs to be imported once
 
 function App() {
+  // **** this is for first commit in current branch
   window.name = 'audrey ' //defining global variable via window object 
 
   return (
