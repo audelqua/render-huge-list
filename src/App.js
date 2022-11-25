@@ -29,6 +29,7 @@ import 'react-virtualized/styles.css'; // only needs to be imported once
 function App() {
   // **** this is for first commit in current branch
   // **** this is for second commit in current branch
+  // **** this is for fourth commit in target branch
   window.name = 'audrey ' //defining global variable via window object 
 
   return (
