@@ -43,6 +43,10 @@ function App() {
 
 export default App;
 
+// this is a changed i only want to get this from main branch and put it in my feature branch.
+
+
+
 // const HeavyChildComponent = (props) => { 
 //   // const [myData, updateMyData] = useState(myJSONData.human.filter((item , index) => index < 1000));
 //   // const [myData, updateMyData] = useState(myJSONData.human);
