@@ -1,4 +1,4 @@
-import React, {useState, UseEffect, useEffect} from 'react'
+import React, {useState, UseEffect, useEffect, Profiler} from 'react'
 // import myJSONData from './constants/data.json'
 import './App.css';
 import {AutoSizer, List} from 'react-virtualized';
@@ -36,7 +36,15 @@ function App() {
 
   return (
     <div className="App">
-      <CssSelectors />
+      <Profiler id='css-selector' onRender={() => console.log('CssSelectors called')}>
+        <CssSelectors />
+      </Profiler>
+      <Profiler id='ShoppingCart' onRender={() => console.log('ShoppingCart called')}>
+        <ShoppingCart />
+      </Profiler>
+      <Profiler id='SampleUsageOfRootRender' onRender={() => console.log('SampleUsageOfRootRender called')}>
+        <SampleUsageOfRootRender />
+      </Profiler>
     </div>
   );
 }
