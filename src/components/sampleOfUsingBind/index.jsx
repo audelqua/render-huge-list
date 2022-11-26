@@ -29,5 +29,6 @@ class UsingOfBindMethod extends Component {
 export default UsingOfBindMethod
 
 // commit C in main branch
+// commit D in main branch
 
 
