@@ -4,7 +4,7 @@ import Todos from './todos'
 
 const SampleOfUseCallback = props => {
     const [count, setCount] = useState(0);
-    const [todos, setTodos] = useState([]);
+    const [todo, setTodo] = useState([]);
 
     const increment = () => {
         setCount((c) => c + 1);
@@ -14,8 +14,8 @@ const SampleOfUseCallback = props => {
     // in order to prevent re-render in child component when this component re-render and this function re-create,
 
     const addTodo = useCallback(() => {
-        setTodos((t) => [...t, "New Todo"]);
-    }, [todos])
+        setTodo((t) => [...t, "New Todo"]);
+    }, [todo])
 
 
     //this version of this function is not good. because whenever this component re-render it will re-create. 
@@ -28,7 +28,7 @@ const SampleOfUseCallback = props => {
 
     return (
         <>
-            <Todos todos={todos} addTodo={addTodo} />
+            <Todos todo={todo} addTodo={addTodo} />
             <hr />
             <div>
                 Count: {count}
