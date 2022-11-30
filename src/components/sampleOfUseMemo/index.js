@@ -3,7 +3,7 @@ import React, {useState, useCallback, useMemo} from 'react'
 
 const SampleOfUseMemo = props => {
     const [count, setCount] = useState(0);
-    const [todos, setTodos] = useState([]);
+    const [todo, setTodo] = useState([]);
 
     // in this senario when you click addTodo count does not change but because the page re-render due to state change. 
     // this calculation happens again and make shit in terms of performance.
@@ -21,14 +21,14 @@ const SampleOfUseMemo = props => {
         setCount((c) => c + 1);
     }
     const addTodo = () => {
-        setTodos((t) => [...t, "New Todo"]);
+        setTodo((t) => [...t, "New Todo"]);
     }
 
     return (
         <div>
             <div>
                 <h2>My Todos</h2>
-                {todos.map((todo, index) => {
+                {todo.map((todo, index) => {
                 return <p key={index}>{todo}</p>;
                 })}
                 <button onClick={addTodo}>Add Todo</button>
