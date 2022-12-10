@@ -5,12 +5,17 @@ const ShoppingCart = () => {
 
     const handleCallReorderFunction = () => {
         let tempArray = Array.from(array)
-
-        for(let i = 0; i < tempArray.length; i++) {
-            for(let j = 0; j < i; j++){
-                console.log('j', j);
+   
+        for(let i = 0; i < tempArray.length; i++){
+            for(let j = 0; j < i; j++) {
+                if(tempArray[i] < tempArray[j]) {
+                    let x = tempArray[i]
+                    tempArray[i] = tempArray[j]
+                    tempArray[j] = x
+                }
             }
         }
+        console.log(tempArray);
     }
     
     return(
