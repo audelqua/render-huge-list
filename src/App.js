@@ -36,7 +36,7 @@ function App() {
 
   return (
     <div className="App">
-      <Profiler id='css-selector' onRender={() => console.log('CssSelectors called')}>
+      {/* <Profiler id='css-selector' onRender={() => console.log('CssSelectors called')}>
         <CssSelectors />
       </Profiler>
       <Profiler id='ShoppingCart' onRender={() => console.log('ShoppingCart called')}>
@@ -44,7 +44,7 @@ function App() {
       </Profiler>
       <Profiler id='SampleUsageOfRootRender' onRender={() => console.log('SampleUsageOfRootRender called')}>
         <SampleUsageOfRootRender />
-      </Profiler>
+      </Profiler> */}
     </div>
   );
 }
