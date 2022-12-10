@@ -22,7 +22,7 @@ import SampleUsageOfFlushSync from './components/sampleUsageOfFlushSync'
 import ShallowComparisonTesting from './components/shallowComparisonTesting'
 import ShoppingCart from './components/shoppingCart'
 import CssSelectors from './components/cssSelectors'
-import SimpleArray from './components/SimpleArray'
+import Algorithms from './components/Algorithms'
 
 import styled from 'styled-components'
 import 'react-virtualized/styles.css'; // only needs to be imported once
@@ -46,7 +46,7 @@ function App() {
       <Profiler id='SampleUsageOfRootRender' onRender={() => console.log('SampleUsageOfRootRender called')}>
         <SampleUsageOfRootRender />
       </Profiler> */}
-      <SimpleArray />
+      <Algorithms />
     </div>
   );
 }
