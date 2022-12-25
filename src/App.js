@@ -23,11 +23,13 @@ import ShallowComparisonTesting from './components/shallowComparisonTesting'
 import ShoppingCart from './components/shoppingCart'
 import CssSelectors from './components/cssSelectors'
 import Algorithms from './components/Algorithms'
+import AsyncInUseEffect from './components/AsyncInUseEffect'
 
 import styled from 'styled-components'
 import 'react-virtualized/styles.css'; // only needs to be imported once
 
 function App() {
+  const [state, setState] = useState(1)
   // **** this is for first commit in current branch
   // **** this is for second commit in current branch
   // **** this is for fourth commit in target branch
@@ -37,6 +39,9 @@ function App() {
 
   return (
     <div className="App">
+      <button onClick={() => setState(prev => prev + 1)}>
+        change
+      </button>
       {/* <Profiler id='css-selector' onRender={() => console.log('CssSelectors called')}>
         <CssSelectors />
       </Profiler>
@@ -46,7 +51,7 @@ function App() {
       <Profiler id='SampleUsageOfRootRender' onRender={() => console.log('SampleUsageOfRootRender called')}>
         <SampleUsageOfRootRender />
       </Profiler> */}
-      <Algorithms />
+      {state % 2 === 0 && <AsyncInUseEffect />}
     </div>
   );
 }
