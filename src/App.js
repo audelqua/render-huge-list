@@ -51,7 +51,6 @@ function App() {
       <Profiler id='SampleUsageOfRootRender' onRender={() => console.log('SampleUsageOfRootRender called')}>
         <SampleUsageOfRootRender />
       </Profiler> */}
-      {state % 2 === 0 && <AsyncInUseEffect />}
     </div>
   );
 }
