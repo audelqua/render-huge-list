@@ -43,7 +43,7 @@ function App() {
       <button onClick={() => setState(prev => prev + 1)}>
         change
       </button>
-      <Profiler id='css-selector' onRender={() => console.log('CssSelectors called')}>
+      {/* <Profiler id='css-selector' onRender={() => console.log('CssSelectors called')}>
         <CssSelectors />
       </Profiler>
       <Profiler id='ShoppingCart' onRender={() => console.log('ShoppingCart called')}>
@@ -51,7 +51,7 @@ function App() {
       </Profiler>
       <Profiler id='SampleUsageOfRootRender' onRender={() => console.log('SampleUsageOfRootRender called')}>
         <SampleUsageOfRootRender />
-      </Profiler>
+      </Profiler> */}
     </div>
   );
 }
