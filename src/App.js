@@ -24,6 +24,7 @@ import ShoppingCart from './components/shoppingCart'
 import CssSelectors from './components/cssSelectors'
 import Algorithms from './components/Algorithms'
 import AsyncInUseEffect from './components/AsyncInUseEffect'
+import UseEffectVsUseLayoutEffect from './components/UseEffectVsUseLayoutEffect'
 
 import styled from 'styled-components'
 import 'react-virtualized/styles.css'; // only needs to be imported once
@@ -52,6 +53,7 @@ function App() {
       <Profiler id='SampleUsageOfRootRender' onRender={() => console.log('SampleUsageOfRootRender called')}>
         <SampleUsageOfRootRender />
       </Profiler> */}
+      <UseEffectVsUseLayoutEffect />
     </div>
   );
 }
