@@ -1,9 +1,14 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 const UseEffectVsUseLayoutEffect = () => {
+    const [message, setMessage]= useState('some custom message')
+
+    useEffect(function() {
+        console.log('did mount');
+    }, [])
     return(
         <div>
-            Hi there im a sample component
+            {message}
         </div>
     )
 }
