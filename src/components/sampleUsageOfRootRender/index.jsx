@@ -14,7 +14,7 @@ class SampleUsageOfRootRender extends React.Component{
     }
 
     render() {
-        console.log('this.counter', this.counter);
+        console.log('this.counter', window.someVariable);
         return (
             <div id='aaaaa'>
                 hello root render + <span>{this.counter}</span>

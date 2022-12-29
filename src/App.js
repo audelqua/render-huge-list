@@ -29,6 +29,7 @@ import styled from 'styled-components'
 import 'react-virtualized/styles.css'; // only needs to be imported once
 
 function App() {
+  window.someVariable = 'hello im global variable one'
   const [state, setState] = useState(1)
   // **** this is for first commit in current branch
   // **** this is for second commit in current branch
@@ -42,7 +43,7 @@ function App() {
       <button onClick={() => setState(prev => prev + 1)}>
         change
       </button>
-      {/* <Profiler id='css-selector' onRender={() => console.log('CssSelectors called')}>
+      <Profiler id='css-selector' onRender={() => console.log('CssSelectors called')}>
         <CssSelectors />
       </Profiler>
       <Profiler id='ShoppingCart' onRender={() => console.log('ShoppingCart called')}>
@@ -50,7 +51,7 @@ function App() {
       </Profiler>
       <Profiler id='SampleUsageOfRootRender' onRender={() => console.log('SampleUsageOfRootRender called')}>
         <SampleUsageOfRootRender />
-      </Profiler> */}
+      </Profiler>
     </div>
   );
 }
