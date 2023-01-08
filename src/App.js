@@ -26,6 +26,7 @@ import Algorithms from './components/Algorithms'
 import AsyncInUseEffect from './components/AsyncInUseEffect'
 import UseEffectVsUseLayoutEffect from './components/UseEffectVsUseLayoutEffect'
 import ReferenceSeparating from './components/referenceSeparating'
+import CreatePortal from './components/createPortal'
 
 import styled from 'styled-components'
 import 'react-virtualized/styles.css'; // only needs to be imported once
@@ -55,7 +56,7 @@ function App() {
         <SampleUsageOfRootRender />
       </Profiler> */}
       {/* <UseEffectVsUseLayoutEffect /> */}
-      <ReferenceSeparating />
+      <CreatePortal />
     </div>
   );
 }
