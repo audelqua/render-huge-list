@@ -21,6 +21,22 @@ const ReferenceSeparating = () => {
 
     console.log('someObject', someObject);
     console.log('anotherObject', anotherObject);
+
+    const someArray = [
+        [
+            [
+                [
+                    2
+                ]
+            ]
+        ]
+    ]
+
+    const someAnotherArray = _.cloneDeep(someArray)
+    someAnotherArray[0][0][0] = 12
+
+    console.log('someArray', someArray);
+    console.log('someAnotherArray', someAnotherArray);
     
     return (
         <div>
