@@ -34,13 +34,15 @@ import 'react-virtualized/styles.css'; // only needs to be imported once
 function App() {
   window.someVariable = 'hello im global variable one'
   const [state, setState] = useState(1)
+  const someConstantVariable = 12
+
   // **** this is for first commit in current branch
   // **** this is for second commit in current branch
   // **** this is for fourth commit in target branch
   // **** this is for third commit in current branch
   // **** this is for fiveth commit in current branch
   window.name = 'audrey ' //defining global variable via window object 
-
+  
   return (
     <div className="App">
       <button onClick={() => setState(prev => prev + 1)}>
@@ -56,7 +58,7 @@ function App() {
         <SampleUsageOfRootRender />
       </Profiler> */}
       {/* <UseEffectVsUseLayoutEffect /> */}
-      <CreatePortal />
+      <CreatePortal someConstantVariable={someConstantVariable}/>
     </div>
   );
 }
