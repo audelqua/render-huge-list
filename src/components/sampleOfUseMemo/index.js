@@ -27,7 +27,7 @@ const SampleOfUseMemo = props => {
     return (
         <div>
             <div>
-                <h2>My Todos</h2>
+                <h2>My Todo</h2>
                 {todo.map((todo, index) => {
                 return <p key={index}>{todo}</p>;
                 })}

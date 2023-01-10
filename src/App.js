@@ -58,7 +58,8 @@ function App() {
         <SampleUsageOfRootRender />
       </Profiler> */}
       {/* <UseEffectVsUseLayoutEffect /> */}
-      <CreatePortal someConstantVariable={someConstantVariable}/>
+      {/* <CreatePortal someConstantVariable={someConstantVariable}/> */}
+      <SampleOfUseMemo />
     </div>
   );
 }
