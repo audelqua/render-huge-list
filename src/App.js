@@ -27,6 +27,8 @@ import AsyncInUseEffect from './components/AsyncInUseEffect'
 import UseEffectVsUseLayoutEffect from './components/UseEffectVsUseLayoutEffect'
 import ReferenceSeparating from './components/referenceSeparating'
 import CreatePortal from './components/createPortal'
+import SampleOfMemo from './components/sampleOfMemo'
+
 
 import styled from 'styled-components'
 import 'react-virtualized/styles.css'; // only needs to be imported once
@@ -59,7 +61,7 @@ function App() {
       </Profiler> */}
       {/* <UseEffectVsUseLayoutEffect /> */}
       {/* <CreatePortal someConstantVariable={someConstantVariable}/> */}
-      <SampleOfUseMemo />
+      <SampleOfMemo />
     </div>
   );
 }
