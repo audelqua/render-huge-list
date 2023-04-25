@@ -1,5 +1,5 @@
 # For react project we should specify base image which is node. 
-FROM node:lastest
+FROM node:latest
 
 # then you have to specify working directory which is src in this case.
 WORKDIR /src
