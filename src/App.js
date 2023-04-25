@@ -45,6 +45,11 @@ function App() {
   // **** this is for fiveth commit in current branch
   window.name = 'audrey ' //defining global variable via window object 
   
+  const handleClick = (e) => {
+    e.preventDefault()
+    console.log('salam');
+  }
+
   return (
     <div className="App">
       <button onClick={() => setState(prev => prev + 1)}>
@@ -61,7 +66,7 @@ function App() {
       </Profiler> */}
       {/* <UseEffectVsUseLayoutEffect /> */}
       {/* <CreatePortal someConstantVariable={someConstantVariable}/> */}
-      <SampleOfMemo />
+      {/* <SampleOfMemo /> */}
     </div>
   );
 }
