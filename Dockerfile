@@ -5,6 +5,7 @@ FROM node:latest
 WORKDIR /src
 
 # then you have to add projec file "package and package-lock json files"
+# we use * after package to include package and all after it. means that we use this for adding "package.json and package-lock.json"
 COPY package*.json ./
 
 # then run npm install to install dependencies in container
