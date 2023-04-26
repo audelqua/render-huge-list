@@ -24,7 +24,7 @@ EXPOSE 3000
 CMD ["npm", "start"]
 
 
-# points: 
+# points: How to reflect your local changes into your live container
 # if you want your local changes reflect on your live container you have to use bind mount your container to your code. 
 # you can use this with -v flag. so the whole command is this: docker run -v $(pwd):/src -p 3000:3000 sample-repo
 # $(pwd) is for finding your current directory which is your local code directory.
