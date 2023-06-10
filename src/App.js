@@ -35,6 +35,8 @@ import "react-virtualized/styles.css"; // only needs to be imported once
 
 function App() {
   const [rows, setRows] = useState([]);
+  const [calcRows, setCalcRows] = useState([]);
+  
   // console.log(rows);
   // window.someVariable = 'hello im global variable one'
   // const [state, setState] = useState(1)
@@ -94,17 +96,22 @@ function App() {
     let calculatedFields = [];
     let tempRows = structuredClone(rows);
 
-    tempRows.forEach((row, index) => {
+    tempRows = tempRows.map((row, index) => {
       if (row.type === "total") {
-        calculatedFields.push({ 
-          position: index, 
+        const tempRow = {
           ...row,
-          children: childFinder(tempRows, index),
           value: sumFinder(childFinder(tempRows, index)),
-        });
-      }
+        }
+        return tempRow
+        // calculatedFields.push({ 
+        //   position: index, 
+        //   ...row,
+        //   children: childFinder(tempRows, index),
+        //   value: sumFinder(childFinder(tempRows, index)),
+        // });
+      }else return row
     });
-    
+    setCalcRows(tempRows)
     console.log('calculatedFields', calculatedFields);
   };
 
@@ -144,7 +151,7 @@ function App() {
       {/* <UseEffectVsUseLayoutEffect /> */}
       {/* <CreatePortal someConstantVariable={someConstantVariable}/> */}
       {/* <SampleOfMemo /> */}
-      {rows.map((row, index) => (
+      {calcRows.map((row, index) => (
         <Row
           key={index}
           handleAddNewRow={handleAddNewRow}
@@ -153,7 +160,7 @@ function App() {
           row={{ ...row, id: index }}
         />
       ))}
-      {!rows.length > 0 && (
+      {!calcRows.length > 0 && (
         <div
           style={{ border: "1px solid red", cursor: "pointer" }}
           onClick={handleAddNewRow}
