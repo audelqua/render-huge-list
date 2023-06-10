@@ -100,7 +100,7 @@ function App() {
       if (row.type === "total") {
         const tempRow = {
           ...row,
-          value: sumFinder(childFinder(tempRows, index)),
+          value: sumFinder(childFinder(tempRows, index, 'total')),
         }
         return tempRow
         // calculatedFields.push({ 
@@ -109,7 +109,13 @@ function App() {
         //   children: childFinder(tempRows, index),
         //   value: sumFinder(childFinder(tempRows, index)),
         // });
-      }else return row
+      }else if(row.type === "subtotal"){
+        const tempRow = {
+          ...row,
+          value: sumFinder(childFinder(tempRows, index, 'subtotal')),
+        }
+        return tempRow
+      } else return row
     });
     setCalcRows(tempRows)
     console.log('calculatedFields', calculatedFields);
@@ -121,13 +127,20 @@ function App() {
     return val
   }
 
-  const childFinder = (tempRows, index) => {
+  const childFinder = (tempRows, index, myType) => {
     let children = []
 
     for(let i = index - 1; i >= 0; i--) {
-      if(tempRows[i].type === 'total' ||  tempRows[i].type === 'title') return children;
-      else{
-        children.push(tempRows[i])
+      if(myType === 'total') {
+        if(tempRows[i].type === 'total' ||  tempRows[i].type === 'title') return children;
+        else{
+          children.push(tempRows[i])
+        }
+      }else if(myType === 'subtotal') {
+        if(tempRows[i].type === 'subtotal' || tempRows[i].type === 'subtitle' || tempRows[i].type === 'total' || tempRows[i].type === 'title') return children;
+        else{
+          children.push(tempRows[i])
+        }
       }
     }
     return children
