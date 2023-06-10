@@ -125,7 +125,7 @@ function App() {
 
   const sumFinder = (children) => {
     let val = 0
-    val = children.filter(child => child.type === 'item').reduce((acc, cur) => +acc + +cur.value, 0)
+    val = children.filter(child => child.type === 'item' && child.calculate).reduce((acc, cur) => +acc + +cur.value, 0)
     return val
   }
 
