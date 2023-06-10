@@ -36,7 +36,7 @@ import "react-virtualized/styles.css"; // only needs to be imported once
 function App() {
   const [rows, setRows] = useState([]);
   const [calcRows, setCalcRows] = useState([]);
-  
+  console.log('calcRows', calcRows);
   // console.log(rows);
   // window.someVariable = 'hello im global variable one'
   // const [state, setState] = useState(1)
@@ -59,7 +59,7 @@ function App() {
 
     const tempRow = {
       type: undefined,
-      value: '0',
+      value: 0,
       name: undefined,
       calculate: true,
     };
@@ -100,6 +100,7 @@ function App() {
       if (row.type === "total") {
         const tempRow = {
           ...row,
+          children: childFinder(tempRows, index, 'total'),
           value: sumFinder(childFinder(tempRows, index, 'total')),
         }
         return tempRow
@@ -112,6 +113,7 @@ function App() {
       }else if(row.type === "subtotal"){
         const tempRow = {
           ...row,
+          children: childFinder(tempRows, index, 'subtotal'),
           value: sumFinder(childFinder(tempRows, index, 'subtotal')),
         }
         return tempRow
