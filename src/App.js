@@ -36,7 +36,7 @@ import "react-virtualized/styles.css"; // only needs to be imported once
 function App() {
   const [rows, setRows] = useState([]);
   const [calcRows, setCalcRows] = useState([]);
-  console.log('calcRows', calcRows);
+  console.log("calcRows", calcRows);
   // console.log(rows);
   // window.someVariable = 'hello im global variable one'
   // const [state, setState] = useState(1)
@@ -93,60 +93,61 @@ function App() {
   };
 
   const handleCalculate = () => {
-    let calculatedFields = [];
     let tempRows = structuredClone(rows);
 
     tempRows = tempRows.map((row, index) => {
       if (row.type === "total") {
         const tempRow = {
           ...row,
-          children: childFinder(tempRows, index, 'total'),
-          value: sumFinder(childFinder(tempRows, index, 'total')),
-        }
-        return tempRow
-        // calculatedFields.push({ 
-        //   position: index, 
-        //   ...row,
-        //   children: childFinder(tempRows, index),
-        //   value: sumFinder(childFinder(tempRows, index)),
-        // });
-      }else if(row.type === "subtotal"){
+          children: childFinder(tempRows, index, "total"),
+          value: sumFinder(childFinder(tempRows, index, "total")),
+        };
+        return tempRow;
+      } else if (row.type === "subtotal") {
         const tempRow = {
           ...row,
-          children: childFinder(tempRows, index, 'subtotal'),
-          value: sumFinder(childFinder(tempRows, index, 'subtotal')),
-        }
-        return tempRow
-      } else return row
+          children: childFinder(tempRows, index, "subtotal"),
+          value: sumFinder(childFinder(tempRows, index, "subtotal")),
+        };
+        return tempRow;
+      } else return row;
     });
-    setCalcRows(tempRows)
-    console.log('calculatedFields', calculatedFields);
+    setCalcRows(tempRows);
   };
 
   const sumFinder = (children) => {
-    let val = 0
-    val = children.filter(child => child.type === 'item' && child.calculate).reduce((acc, cur) => +acc + +cur.value, 0)
-    return val
-  }
+    let val = 0;
+    val = children
+      .filter((child) => child.type === "item" && child.calculate)
+      .reduce((acc, cur) => +acc + +cur.value, 0);
+    return val;
+  };
 
   const childFinder = (tempRows, index, myType) => {
-    let children = []
+    let children = [];
 
-    for(let i = index - 1; i >= 0; i--) {
-      if(myType === 'total') {
-        if(tempRows[i].type === 'total' ||  tempRows[i].type === 'title') return children;
-        else{
-          children.push(tempRows[i])
+    for (let i = index - 1; i >= 0; i--) {
+      if (myType === "total") {
+        if (tempRows[i].type === "total" || tempRows[i].type === "title")
+          return children;
+        else {
+          children.push(tempRows[i]);
         }
-      }else if(myType === 'subtotal') {
-        if(tempRows[i].type === 'subtotal' || tempRows[i].type === 'subtitle' || tempRows[i].type === 'total' || tempRows[i].type === 'title') return children;
-        else{
-          children.push(tempRows[i])
+      } else if (myType === "subtotal") {
+        if (
+          tempRows[i].type === "subtotal" ||
+          tempRows[i].type === "subtitle" ||
+          tempRows[i].type === "total" ||
+          tempRows[i].type === "title"
+        )
+          return children;
+        else {
+          children.push(tempRows[i]);
         }
       }
     }
-    return children
-  }
+    return children;
+  };
 
   useEffect(() => {
     handleCalculate();
