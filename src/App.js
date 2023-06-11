@@ -161,6 +161,7 @@ function App() {
       <Profiler id='ShoppingCart' onRender={() => console.log('ShoppingCart called')}>
         <ShoppingCart />
       </Profiler>
+      
       <Profiler id='SampleUsageOfRootRender' onRender={() => console.log('SampleUsageOfRootRender called')}>
         <SampleUsageOfRootRender />
       </Profiler> */}
