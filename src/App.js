@@ -194,32 +194,3 @@ const Row = ({
     </div>
   );
 };
-
-// this is a changed i only want to get this from main branch and put it in my feature branch.
-// const HeavyChildComponent = (props) => {
-//   // const [myData, updateMyData] = useState(myJSONData.human.filter((item , index) => index < 1000));
-//   // const [myData, updateMyData] = useState(myJSONData.human);
-
-//   function rowRenderer({key, index, style}) {
-//     return (
-//       <div key={key} style={style}>
-//         {myData[index]}
-//       </div>
-//     );
-//   }
-
-//   return(
-
-//     <AutoSizer>
-//       {({height, width}) => (
-//         <List
-//           height={height}
-//           rowCount={myData.length}
-//           rowHeight={1000}
-//           rowRenderer={rowRenderer}
-//           width={width}
-//         />
-//       )}
-//     </AutoSizer>
-//   )
-// }
