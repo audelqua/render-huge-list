@@ -1,36 +1,5 @@
 import React, { useState, useEffect } from "react";
-// import myJSONData from './constants/data.json'
 import "./App.css";
-// import { AutoSizer, List } from "react-virtualized";
-// import SampleOfContext from "./components/useContextSample";
-// import CounterWithUseReducer from "./components/counterWithUseReducer";
-// import SampleOfUseCallback from "./components/sampleOfUseCallback";
-// import SampleOfUseRef from "./components/sampleOfUseRef";
-// import SampleOfUseMemo from "./components/sampleOfUseMemo";
-// import SampleOfUseTransition from "./components/sampleOfUseTransition";
-// import UsingOfBindMethod from "./components/sampleOfUsingBind";
-// import SampleAddCustomAttribute from "./components/sampleAddCustomAttribute";
-// import SampleOfForwardRef from "./components/sampleOfForwardRef";
-// import CompositionVsInheritance from "./components/compositionVsInheritance";
-// import Editable from "./components/compositionVsInheritance/EditableComponent";
-// import SampleOfUsingRef from "./components/sampleOfUsingRef";
-// import SampleOfForwardingRef from "./components/sampleOfForwardingRef";
-// import SampleOfHOC from "./components/sampleOfHOC";
-// import SampleOfCallBackRef from "./components/sampleOfCallBackRef";
-// import SampleUsageOfRootRender from "./components/sampleUsageOfRootRender";
-// import SampleUsageOfFlushSync from "./components/sampleUsageOfFlushSync";
-// import ShallowComparisonTesting from "./components/shallowComparisonTesting";
-// import ShoppingCart from "./components/shoppingCart";
-// import CssSelectors from "./components/cssSelectors";
-// import Algorithms from "./components/Algorithms";
-// import AsyncInUseEffect from "./components/AsyncInUseEffect";
-// import UseEffectVsUseLayoutEffect from "./components/UseEffectVsUseLayoutEffect";
-// import ReferenceSeparating from "./components/referenceSeparating";
-// import CreatePortal from "./components/createPortal";
-// import SampleOfMemo from "./components/sampleOfMemo";
-
-// import styled from "styled-components";
-import { v4 as uuidv4 } from "uuid";
 import "react-virtualized/styles.css"; // only needs to be imported once
 
 function App() {
@@ -161,7 +130,6 @@ function App() {
       <Profiler id='ShoppingCart' onRender={() => console.log('ShoppingCart called')}>
         <ShoppingCart />
       </Profiler>
-      
       <Profiler id='SampleUsageOfRootRender' onRender={() => console.log('SampleUsageOfRootRender called')}>
         <SampleUsageOfRootRender />
       </Profiler> */}
