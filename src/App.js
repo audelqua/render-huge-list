@@ -5,23 +5,6 @@ import "react-virtualized/styles.css"; // only needs to be imported once
 function App() {
   const [rows, setRows] = useState([]);
   const [calcRows, setCalcRows] = useState([]);
-  console.log("calcRows", calcRows);
-  // console.log(rows);
-  // window.someVariable = 'hello im global variable one'
-  // const [state, setState] = useState(1)
-  // const someConstantVariable = 12
-
-  // // **** this is for first commit in current branch
-  // // **** this is for second commit in current branch
-  // // **** this is for fourth commit in target branch
-  // // **** this is for third commit in current branch
-  // // **** this is for fiveth commit in current branch
-  // window.name = 'audrey ' //defining global variable via window object
-
-  // const handleClick = (e) => {
-  //   e.preventDefault()
-  //   console.log('salam');
-  // }
 
   const handleAddNewRow = (previousId) => {
     let tempRows = structuredClone(rows);
@@ -124,18 +107,6 @@ function App() {
 
   return (
     <div className="App" style={{ marginTop: "20px" }}>
-      {/* <Profiler id='css-selector' onRender={() => console.log('CssSelectors called')}>
-        <CssSelectors />
-      </Profiler>
-      <Profiler id='ShoppingCart' onRender={() => console.log('ShoppingCart called')}>
-        <ShoppingCart />
-      </Profiler>
-      <Profiler id='SampleUsageOfRootRender' onRender={() => console.log('SampleUsageOfRootRender called')}>
-        <SampleUsageOfRootRender />
-      </Profiler> */}
-      {/* <UseEffectVsUseLayoutEffect /> */}
-      {/* <CreatePortal someConstantVariable={someConstantVariable}/> */}
-      {/* <SampleOfMemo /> */}
       {calcRows.map((row, index) => (
         <Row
           key={index}
