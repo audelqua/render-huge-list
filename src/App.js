@@ -105,6 +105,7 @@ function App() {
     handleCalculate();
   }, [rows]);
 
+  
   return (
     <div className="App" style={{ marginTop: "20px" }}>
       {calcRows.map((row, index) => (
